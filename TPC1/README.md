@@ -27,28 +27,32 @@ Somador on/off: criar o programa em Python
 
     r'\d+|[oO][nN]|[oO][fF]{2}|='
 
-- **\d+ -** para um ou mais dígitos numéricos
+- **\d+ -** para um ou mais dígitos
 
 - **[oO][nN] -** para a palavra "ON" ou "on" (insensível a maiúsculas/minúsculas)
 
 - **[oO][fF]{2} -** para a palavra "OFF" ou "off" (insensível a maiúsculas/minúsculas)
 
-- **= -** para o símbolo =
+- **= -** para o símbolo igual (=)
 
 ### Variáveis
 
 - **soma -** mantém a soma dos números enquanto ON está ativo
 
-- **somar -** funciona como uma flag, para saber quais os números devem ser somados ou não
+- **somar -** controla se os números devem ser somados ou não (inicia "desligado")
 
-- **resultado -** guarda os resultados a serem retornados
+- **resultado -** guarda os resultados a serem retoexibidosrnados
 
-A função percorre a string de entrada e, para cada correspondência encontrada pela expressão regular, executa as seguintes ações:
 
-    Comando "ON": Ativa o modo de soma, permitindo que números subsequentes sejam adicionados à soma atual.
-    Comando "OFF": Desativa o modo de soma, impedindo que números subsequentes sejam adicionados.
-    Símbolo "=": Registra o valor da soma atual no resultado e reinicia a soma para zero.
-    Números: Se o modo de soma estiver ativo, adiciona o número à soma atual.
+#### A função percorre a string de entrada, para cada correspondência encontrada pela expressão regular, executa as seguintes ações:
+
+- **Comando "ON" -** Ativa o modo de soma, permite que números subsequentes sejam adicionados à soma atual.
+
+- **Comando "OFF" -** Desativa o modo de soma, impede que números subsequentes sejam adicionados.
+
+- **Símbolo "=" -** Guarda o valor da soma atual no resultado e reinicia a soma para zero.
+
+- **Números -** Se o modo de soma estiver ativo, adiciona o número à soma atual.
 
 ## Resultados
 
