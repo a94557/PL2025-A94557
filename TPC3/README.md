@@ -12,10 +12,8 @@
 
 ## Enunciado
 
-Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic
-Syntax" da Cheat Sheet:
+Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic Syntax" da Cheat Sheet:
 
-Deverás ler o dataset, processá-lo e criar os seguintes resultados:
 
     1. Cabeçalhos: linhas iniciadas por "# texto", ou "## texto" ou "### texto"
 
@@ -27,11 +25,13 @@ Deverás ler o dataset, processá-lo e criar os seguintes resultados:
     
     5. Link: [texto](endereço URL)
 
-    6.Imagem: ![texto alternativo](path para a imagem)
+    6. Imagem: ![texto alternativo](path para a imagem)
 
+## Explicação
 
+**markdown_to_html(md_text):** Esta função recebe um texto em Markdown e realiza substituições com uso expressões regulares e re.sub para convertê-lo em HTML.
 
-
+Foi necessário modificar a ordem da substituição de imagens e links, coloquei a conversão de imagens primeiro. Inicialmente, a conversão de links era realizada antes da conversão de imagens. Como a expressão regular do link é mais abrangente do que das imagens, a conversão não estava a ser realizada corretamente. Ao inverter a ordem, garantimos que imagens sejam processadas corretamente.
 
 ## Resultados
 
